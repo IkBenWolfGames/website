@@ -16,6 +16,11 @@
         font-family: verdana;
         font-size: 15px;
       }
+      .column {
+        float: left;
+        width: 25%;
+        padding: 5px;
+      }
       article {
         color: green;
         font-size: 35px;
@@ -31,9 +36,8 @@
       p {
         color: white;
       }
-    </style>
-    
 
+    </style>
   </head>
   <body style="background-color:#202020">
     <article>Introduction</article>
@@ -41,7 +45,19 @@
     <hr>
     <h2>Lets see some cars that I'm in love with!</h2>
     <article>Coupe's</article>
-    <img src="https://pictures.topspeed.com/IMG/crop/200701/2007-nissan-350z-6_1600x0w.jpg" width="400" height="266" alt="Your browser does not support pictures, please consider trying a different browser">
-    <p>2003 Nissan Fairlady Z (350z)</p>
+    <div class="row">
+      <div class="column">
+        <img id="350z" src="https://static.wikia.nocookie.net/gran-turismo/images/3/3f/Nissan_350Z_%28Z33%2C_EU%29_%2703_%28GT6%29.jpg/revision/latest?cb=20181024113145" width="400" height="266.66" alt="Your browser does not support pictures">
+        <p>2003 Nissan Fairlady Z (350z)</p>
+      </div>
+      <div class="column">
+        <img id="R33" src="https://static.wikia.nocookie.net/gran-turismo/images/3/34/Nissan_SKYLINE_GT-R_%28R33%29_%2797.jpg/revision/latest?cb=20181026125328" width="400" height="266.66" alt="Your browser does not support pictures">
+        <p>1995 Nissan Skyline R33</p>
+      </div>
+      <div class="column">
+        <img id="M3 e46" src="https://static.wikia.nocookie.net/gran-turismo/images/2/2a/BMW_M3_Coup%C3%A9_%2703.jpg/revision/latest?cb=20191128073235" width="400" height="233.33" alt="Your browser does not support pictures">
+        <p>2003 BMW M3 (e46)</p>
+      </div>
+    </div>
   </body>
 </html>
