@@ -8,8 +8,10 @@
     <link rel="shortcut icon" type="image/ico" href="/icon.ico">
     <meta name="description" content="The first site based on HTML on an actual domain/URL.">
     <meta name="author" content="Mike van Bree">
-  
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
     <style>
       html {
@@ -23,11 +25,6 @@
       }
       .row {
         width: 100%;
-      }
-      .column {
-        float: left;
-        width: 32%;
-        padding: 5px;
       }
       article {
         color: green;
@@ -66,38 +63,39 @@
     <hr>
     <h1>Lets see some cars that I'm in love with!</h1>
     <article>16 Years</article>
-    <div class="row">
-      <div class="column">
-        <img id="photo1" src="./photo's/350Z.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
-        <img id="350z_back" src="./photo's/350Z_back.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
-        <p id="carname"><b>2003 Nissan Fairlady Z (350z)</b></p>
-        <p style="margin-right: 50px;">350Z always has been special for me, especially being my #1 dream car that I want later. I'm seeing it as the perfect car, because it's sort of a coupe, but has a big V6 in it. but whenever you wanna tune it, be as free as you want, because if you but a ram bar on it and some rally suspension, you've got a perfect rally car.</p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xxl-4">
+          <img id="photo1" src="./photo's/350Z.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
+          <img id="350z_back" src="./photo's/350Z_back.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
+          <p id="carname"><b>2003 Nissan Fairlady Z (350z)</b></p>
+          <p style="margin-right: 50px;">350Z always has been special for me, especially being my #1 dream car that I want later. I'm seeing it as the perfect car, because it's sort of a coupe, but has a big V6 in it. but whenever you wanna tune it, be as free as you want, because if you but a ram bar on it and some rally suspension, you've got a perfect rally car.</p>
+        </div>
+        <div class="col-xxl-4">
+          <img id="photo1" src="./photo's/R33.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
+          <img id="R33_back" src="./photo's/R33_back.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
+          <p id="carname"><b>1995 Nissan Skyline R33</b></p>
+          <p style="margin-right: 50px;"></p>
+        </div>
+        <div class="col-xxl-4">
+          <img id="photo1" src="./photo's/M3.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
+          <img id="M3 e46_back" src="./photo's/M3_back.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
+          <p id="carname"><b>2002 BMW M3 (e46)</b></p>
+          <p style="margin-right: 50px; margin-bottom: 50px;"> </p>
+        </div>
       </div>
-      <div class="column">
-        <img id="photo1" src="./photo's/R33.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
-        <img id="R33_back" src="./photo's/R33_back.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
-        <p id="carname"><b>1995 Nissan Skyline R33</b></p>
-        <p style="margin-right: 50px;"></p>
-      </div>
-      <div class="column">
-        <img id="photo1" src="./photo's/M3.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
-        <img id="M3 e46_back" src="./photo's/M3_back.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
-        <p id="carname"><b>2002 BMW M3 (e46)</b></p>
-        <p style="margin-right: 50px; margin-bottom: 50px;"> </p>
-      </div>
-    </div>
-    <br>
-    <div class="row" style="margin-top: 100px">
-      <div class="column" style="margin-top: 100px;">
-        <img id="photo1" src="./photo's/Griffith.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
-        <p id="carname"><b>2019 Toyota Supra A90</b></p>
-        <p style="margin-right: 50px;">Soooooo... I've probably got some explaining to do... Yes, I know that in the picture there isn't a Supra 5th gen. My excuse for this is that there isn't that supra in the game where I took photo's (yeah, these are in-game pictures!). But what I did know, is that this car (The TVR Griffith) had tail lights that looked familiar, so I chose the rear of that car. The front of the car doesn't look like the supra though, so I kept it with the rear photo.</p>
-        <p style="color: green; margin-right: 50px;">If the Supra is gonna be added somewhere in the future I'm sure I will change the photo's, to the real car photo's.</p>
-      </div>
-      <div class="column" style="margin-top: 100px;">
-        <img id="photo1" src="./photo's/brz.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
-        <img id="brz_back" src="./photo's/brz_back.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
-        <p id="carname"><b>2013 Subaru BRZ</b></p>
+      <div class="row">
+        <div class="col-xxl-6">
+          <img id="photo1" src="./photo's/Griffith.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
+          <p id="carname"><b>2019 Toyota Supra A90</b></p>
+          <p style="margin-right: 50px;">Soooooo... I've probably got some explaining to do... Yes, I know that in the picture there isn't a Supra 5th gen. My excuse for this is that there isn't that supra in the game where I took photo's (yeah, these are in-game pictures!). But what I did know, is that this car (The TVR Griffith) had tail lights that looked familiar, so I chose the rear of that car. The front of the car doesn't look like the supra though, so I kept it with the rear photo.</p>
+          <p style="color: green; margin-right: 50px;">If the Supra is gonna be added somewhere in the future I'm sure I will change the photo's, to the real car photo's.</p>
+        </div>
+        <div class="col-xxl-6">
+          <img id="photo1" src="./photo's/brz.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
+          <img id="brz_back" src="./photo's/brz_back.png" width="500" height="333.33" alt="Your browser does not support pictures or the picture location is corrupted">
+          <p id="carname"><b>2013 Subaru BRZ</b></p>
+        </div>
       </div>
     </div>
     <footer>
