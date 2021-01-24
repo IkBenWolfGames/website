@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #303035;
+        line-height: 300%;
+      }
+      label {
+        font-size: 18px;
+        color: white;
+      }
+      input, select {
+        height: 33px;
+        font-size: 15px;
+        border-radius: 10px;
+        border: 2px solid green;
+      }
+      #Checkbox {
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body background-color="#505050">
+    <form method="post" data-netlify="true" name="wedstrijddata">
+      <label>Naam thuisploeg</label>
+      <input type="text" name="thuisploeg" style="margin-right: 20px;">
+      <label>Naam gastploeg</label>
+      <input type="text" name="gastploeg">
+      <br />
+      <label>Score thuisploeg</label>
+      <input type="number" name="score thuisploeg" style="margin-right: 20px;">
+      <label>Score gastploeg</label>
+      <input type="number" name="score gastploeg">
+      <br />
+      <label>Datum wedstrijd</label>
+      <input type="date" name="datum wedstrijd">
+      <br />
+      <label>Klasse</label>
+      <select name="klasses">
+        <option value="eerste klasse A">Eerste klasse A</option>
+        <option value="eerste klasse B">Eerste klasse B</option>
+        <option value="eerste nationale">Eerste nationale</option>
+        <option value="tweede afdeling VV A">Tweede afdeling VV A</option>
+        <option value="tweede afdeling VV B">Tweede afdeling VV B</option>
+        <option value="tweede afdeling ACFF">Tweede afdeling ACFF</option>
+        <option value="derde afdeling VV A">Derde afdeling VV A</option>
+        <option value="derde afdeling VV B">Derde afdeling VV B</option>
+        <option value="derde afdeling ACFF A">Derde afdeling ACFF A</option>
+        <option value="derde afdeling ACFF B">Derde afdeling ACFF B</option>
+        <option value="provinciaal amateurvoetbal">Provinciaal amateurvoetbal</option>
+      </select>
+      <br />
+      <label>Oefenwedstrijd?</label>
+      <input type="checkbox" name="oefenwedstrijd" id="Checkbox">
+      <input type="submit" value="Verstuur" style="margin-left: 50px;">
+    </form>
+  </body>
+</html>
