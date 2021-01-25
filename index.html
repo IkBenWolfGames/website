@@ -17,12 +17,24 @@
       html {
         position: absolute;
         min-height: 100%;
+        background-color: #303035;
       }
-      body {
-        font-family: verdana;
-        color: white;
-        font-size: 1.1em;
-        background-color:#303035;
+        body {
+          font-family: verdana;
+          color: white;
+          background-color:#303035;
+        }
+      @media (min-device-width: 721px;) {
+        p {
+          color: white;
+          font-size: 1em;
+        }
+      }
+      @media (max-device-width: 720;) {
+        p {
+          color: white;
+          font-size: 50px;
+        }
       }
       .row {
         width: 100%;
