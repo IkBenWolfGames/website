@@ -10,6 +10,7 @@
     <meta name="author" content="Mike van Bree">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
@@ -68,14 +69,15 @@
       <input type="checkbox" name="oefenwedstrijd" id="Checkbox">
       <input type="submit" value="Verstuur" style="margin-left: 50px;">
     </form>
-    <div class="form-group">
-      <div class="g-recaptcha" data-sitekey="6LfKURIUAAAAAO50vlwWZkyK_G2ywqE52NU7YO0S" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-        <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
-              <div class="help-block with-errors"></div>
+    <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+      <div class="form-group">
+        <div class="g-recaptcha" data-sitekey="6LdyDlIaAAAAAO9-u4tMz-7diSAVDNgBaUEkrZYh" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+          <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
+                <div class="help-block with-errors"></div>
       </div>
+    </form>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
     <script src="validator.js"></script>
     <script src="contact.js"></script>
   </body>
