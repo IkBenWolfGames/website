@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
   
-    <title>HTML-based site</title>
+    <title>Eindwerken Mike van Bree</title>
     <link rel="shortcut icon" type="image/ico" href="/icon.ico">
     <meta name="description" content="Infinity Mirror eindwerk 5 IICT Mosa-RT">
     <meta name="author" content="Mike van Bree">
@@ -22,17 +22,16 @@
       html {
         position: absolute;
         min-height: 100%;
-        background-color: #241236;
+        width: 95%;
+        overflow: auto;
       }
       body {
         font-family: verdana;
         color: white;
         background-color:#241236;
-      }
-      .row {
-        width: 100%;
-      }
+        text-align: center;
 
+      }
       article {
         color: #3186A0;
         font-size: 35px;
@@ -52,40 +51,29 @@
         color: #3186A088;
       }
       p {
-        margin-left: 10px;
         color: #ffffffff;
       }
-      br {
-        border-spacing: 20px;
-      }
-
-      footer2 {
-        margin-top: 50px;
-        bottom: 0;
-        width: 100%;
-        height: 0px;
-        font-size: 28px;
+      footer {
+        margin-bottom: 0;
       }
 
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <article>Introductie</article>
-      <p>Dit is een website voor mijn eindwerk(en) op 5 IICT, Mosa-RT.
+      <p>Dit is een website voor mijn eindwerk(en) op Mosa-RT.
       Ik heb gekozen om voor mijn eindwerk een infinity mirror te maken. er zullen foto's volgen mocht u niet weten wat dit is.</p>
       <hr>
       <h1>Arduino Infinity Mirror</h1>
       <p>Voor 5 IICT moest ik een Infinity mirror maken als eindwerk, gebruikmakend van een Arduino, een microcontroller.</p>
-      <footer class="footer">
-        <div class="container">
-          <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=breemikevan@hotmail.com&item_name=Website+schoolprojecten&item_number=Website+Donate+Button&currency_code=EUR" target="_blank"style="color: #204e9e;">Support my work!</a> 
+      <footer class="text-center text-lg-start bg-dark">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          <a class="text-muted" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=breemikevan@hotmail.com&item_name=Website+schoolprojecten&item_number=Website+Donate+Button">Support me!</a>
+          <a class="text-muted" href="https://www.mosa-rt.be/" style="margin-left: 50px;" target="_blank">Mijn school</a>
         </div>
-      </footer>
-      <footer class="footer mt-auto py-3 bg-dark">
-        <div class="container">
-          <span class="text-muted">Place sticky footer content here.</span>
-        </div>
+        <!-- Copyright -->
       </footer>
     </div>
   </body>
