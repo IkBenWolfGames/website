@@ -22,54 +22,8 @@
     crossorigin="anonymous"></script>
   <script src="bootstrap-5.0.1-dist/js/bootstrap.js" crossorigin="anonymous"></script>
 
-
+  <link rel="stylesheet" href="./navbar.css">
   <style>
-    html {
-      position: absolute;
-      min-height: 100%;
-      width: 95%;
-      overflow: auto;
-    }
-
-    body {
-      font-family: verdana;
-      color: white;
-      background-color: #1E2124;
-      text-align: center;
-    }
-
-    .navbar {
-      margin-bottom: -1%;
-    }
-
-    .nav {
-      margin-right: -10px;
-    }
-
-    #navbar a:not(#navbarlogo) {
-      float: left;
-      color: #ffffff;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-    .sticky {
-      position: fixed;
-      top: 0;
-      width: 100%;
-    }
-
-    /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-    .sticky+.content {
-      padding-top: 60px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #92BC10;
-    }
-
     article {
       color: #3186A0;
       font-size: 35px;
@@ -115,8 +69,10 @@
         </div>
         <ul class="nav navbar-nav">
           <li class="active btn btn-primary"><a href="">Home</a></li>
-          <li class="btn btn-secondary"><a href="#ArduinoInfinityMirror">Infinity Mirror</a></li>
-          <li class="btn btn-secondary"><a href="https://kasomk-my.sharepoint.com/:x:/g/personal/vami031204_leerling_mosa-rt_be/EYe8-qv-ROBCteq37D--wb4B-cedh1MLpEpAfYUwtovqmA?e=UpaNAk" target="_blank">Materialen</a></li>
+          <li class="btn btn-secondary"><a href="#Stage1">Infinity Mirror</a></li>
+          <li class="btn btn-secondary"><a
+              href="https://kasomk-my.sharepoint.com/:x:/g/personal/vami031204_leerling_mosa-rt_be/EYe8-qv-ROBCteq37D--wb4B-cedh1MLpEpAfYUwtovqmA?e=UpaNAk"
+              target="_blank">Materialen</a></li>
         </ul>
       </div>
     </nav>
@@ -125,17 +81,20 @@
     <p>Ik maakte als eindwerk voor 5 IICT een Infinity Mirror, gebruikmakend van een Arduino Uno.</p>
 
     <hr>
-    
-    <h1 id="ArduinoInfinityMirror">Arduino Infinity Mirror</h1>
-    <p>Voor 5 IICT moest ik een Infinity mirror maken als eindwerk, gebruikmakend van een Arduino, een microcontroller.
-    </p>
-    <h4><a href="https://kasomk-my.sharepoint.com/:x:/g/personal/vami031204_leerling_mosa-rt_be/EYe8-qv-ROBCteq37D--wb4B-cedh1MLpEpAfYUwtovqmA?e=UpaNAk" target="_blank">Materialen</a></h3>
-    
+
+    <article id="Stage1">1ste stage</article>
+    <p>Als eerste maakte ik een schema van hoe ik het project zou moeten maken, en daarna maakte ik het op een breadboard.</p>
+    <h4>Foto's</h4>
+    <br>
+    <p>ik had geen foto's rond deze tijd genomen, dus ik kan enkel wat er nog over is van het breadboard laten zien.</p>
+    <img src="./photo's/breadboard.jpg" alt="Uw browser ondersteunt geen foto's." height="25%" width="25%">
+
 
     <footer class="footer text-lg-start bg-dark">
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        <a class="text-muted" href="https://www.mosa-rt.be/" target="_blank" style="margin-left: -100px;">Mijn school</a>
+        <a class="text-muted" href="https://www.mosa-rt.be/" target="_blank" style="margin-left: -100px;">Mijn
+          school</a>
         <a class="text-muted"
           href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=breemikevan@hotmail.com&item_name=Website+schoolprojecten&item_number=Website+Donate+Button"
           target="_blank" style="margin-left: 100px;">Steun mij!</a>
