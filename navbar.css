@@ -12,17 +12,18 @@ body {
     text-align: center;
 }
 
-.nav {
+.nav, .navbar-nav {
     margin-right: -10px;
     display: flex;
     align-items: flex-start;
     justify-content: left;
+    float: left;
+    z-index: 2;
 }
 
-#navbar a:not(#navbarlogo) {
+#navbar a {
     float: left;
     color: #ffffff;
-    text-align: center;
     overflow: hidden;
 }
 
