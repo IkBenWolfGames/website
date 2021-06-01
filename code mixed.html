@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Eindwerken Mike van Bree</title>
+  <link rel="shortcut icon" type="image/ico" href="/icon.ico">
+  <meta name="description" content="Infinity Mirror eindwerk 5 IICT Mosa-RT">
+  <meta name="author" content="Mike van Bree">
+
+  <meta name="viewport" content="width=device-width; user-scalable=0;" />
+
+  <!--added syntax highlighting-->
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+
+  <!-- added Bootstrap  -->
+  <link rel="stylesheet" href="bootstrap-5.0.1-dist/css/bootstrap.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="bootstrap-5.0.1-dist/js/bootstrap.js" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="./navbar.css">
+  <style>
+    .kwd,
+    .typ {
+      color: #27a4ca;
+    }
+
+    .lit {
+      color: #27a4ca;
+    }
+
+    .clo,
+    .opn,
+    .pun {
+      color: #ffb347;
+    }
+
+    .pln {
+      color: white;
+    }
+
+    .com {
+      color: rgb(134, 134, 134);
+    }
+
+    .prettyprint {
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <nav id="navbar" class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a id="navbarlogo" class="navbar-brand" href="https://Mosa-RT.be" target="_blank">Mosa-RT</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active btn btn-primary"><a href="">Home</a></li>
+          <li class="btn btn-secondary"><a href="./materialen.html">Materialen</a></li>
+          <li class="btn btn-secondary"><a href="./code potentiometer.html">Manual code</a></li>
+          <li class="btn btn-secondary"><a href="./code loop.html">Loop code</a></li>
+          <li class="btn btn-secondary"><a href="./code mixed.html">Mixed code</a></li>
+        </ul>
+      </div>
+    </nav>
+    <pre class="prettyprint"><code class="language-c">
+        const int Brightness = A3, Red = A2, Green = A1, Blue = A0; //inputs
+        int BrightRead, RedRead, GreenRead, BlueRead;               //meetwaardes
+        int RedWrite, GreenWrite, BlueWrite;                        //schrijfwaardes
+        float BrightWrite;                                          //floating point for brightness
+        int redpwm, greenpwm, bluepwm;                              //PWM-waardes voor output
+        const int red = 10, green = 9, blue = 11;                   //outputs
+        
+        const int knop = 12;
+        int knopState;
+        
+        
+        float mapfloat(long x, long in_min, long in_max, long out_min, long out_max)
+        {
+          return (float)(x - in_min) * (out_max - out_min) / (float)(in_max - in_min) + out_min;
+        }
+        
+        
+        void setup() {
+          pinMode(red, OUTPUT);
+          pinMode(green, OUTPUT);
+          pinMode(blue, OUTPUT);
+        
+          analogWrite(red, 0);
+          analogWrite(green, 0);
+          analogWrite(blue, 0);
+        }
+        
+        void loop() {
+          knopState = digitalRead(knop);                            // leest de status van de knop
+          while (knopState == HIGH) {                                  // als de knop is aangezet:
+            manual();                                                   // voer het programma uit met de potentiometer
+            knopState = digitalRead(knop);                            // leest de status van de knop
+          }
+          while (knopState == LOW) {
+            automatic();
+            knopState = digitalRead(knop);                            // leest de status van de knop
+          }
+        }
+        
+        
+        void manual() {
+          BrightRead = analogRead(Brightness);                       //analogRead voor de potentiometers
+          RedRead = analogRead(Red);
+          GreenRead = analogRead(Green);
+          BlueRead = analogRead(Blue);
+        
+          BrightWrite = mapfloat(BrightRead, 0, 1023, 0, 1);         //meetwaardes van bereik 1023 omzetten naar bereik 255 (PWM)
+          RedWrite = map(RedRead, 0, 1023, 0, 255);
+          GreenWrite = map(GreenRead, 0, 1023, 0, 255);
+          BlueWrite = map(BlueRead, 0, 1023, 0, 255);
+        
+          redpwm = RedWrite * BrightWrite;                           //use brightness
+          greenpwm = GreenWrite * BrightWrite;
+          bluepwm = BlueWrite * BrightWrite;
+        
+          analogWrite(red, redpwm);                               //send outputs (N-MOSFETS)
+          analogWrite(green, greenpwm);
+          analogWrite(blue, bluepwm);
+          delay(25);
+        }
+        
+        
+        void automatic() {
+          while (redpwm < 255) {               // R (-B)
+            redpwm++;
+            analogWrite(red, redpwm);
+            delay(5);
+          }
+        
+          while (bluepwm > 0) {                // R
+            bluepwm--;
+            analogWrite(blue, bluepwm);
+            delay(5);
+          }
+        
+          while (greenpwm < 255) {             // R-G
+            greenpwm++;
+            analogWrite(green, greenpwm);
+            delay(5);
+          }
+          while (redpwm > 0) {                 // G
+            redpwm--;
+            analogWrite(red, redpwm);
+            delay(5);
+          }
+          while (bluepwm < 255) {                // G-B
+            bluepwm++;
+            analogWrite(blue, bluepwm);
+            delay(5);
+          }
+          while (greenpwm > 0) {               // B
+            greenpwm--;
+            analogWrite(green, greenpwm);
+            delay(5);
+          }
+        }
+      </code></pre>
+</body>
+
+</html>
