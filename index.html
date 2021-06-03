@@ -35,9 +35,17 @@
     }
 
     footer {
-      margin-bottom: 0;
-      margin-left: -15px;
-      width: 107%;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+}
+    footer a {
+      color: #999;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -94,7 +102,7 @@
     <p>Ik maakte als eindwerk voor 5 IICT een Infinity Mirror, gebruikmakend van een Arduino Uno.</p>
     <hr id="UitlegMirror"><br><br>  
 
-    <div>
+    <div class="UitlegMirror">
       <h2>Wat is een Infinity Mirror?</h2>
       <br>
       <p>Een Infinity Mirror is een cirkel met licht (vaak LEDs), die talloze keren weerspiegeld worden (oneindig =
@@ -102,7 +110,7 @@
       <hr id="UitlegArduino"><br><br>
     </div>
 
-    <div>
+    <div class="UitlegArduino">
       <h2>Wat is een Arduino?</h2>
       <br>
       <p>Een Arduino (Uno) is een klein board met programmeerbare elektronica. Met een Arduino kan je verschillende
@@ -132,11 +140,15 @@
       <hr id="Fase3"><br><br>
     </div>
 
-    <div class="fase3">
+    <div class="fase3" style="padding-bottom: 33px;">
       <h2>Fase 3</h2>
       <p>Fase 3 is het soldeerwerk en de afwerking van het project, hiervan staan alle foto's <a href="./fase3foto.html">hier.</a></p>
     </div>
   </div>
+  <footer>
+    <a href="https://mosa-rt.be/" style="margin-right: 2%">Mijn school</a>
+    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=breemikevan@hotmail.com&lc=US&item_name=Website+eindwerk+5IICT&no_note=0&cn=&currency_code=EUR&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted" style="margin-left: 2%">Support mij!</a>
+  </footer>
 </body>
 
 </html>
