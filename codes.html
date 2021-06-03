@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Eindwerken Mike van Bree</title>
+  <link rel="shortcut icon" type="image/ico" href="/icon.ico">
+  <meta name="description" content="Infinity Mirror eindwerk 5 IICT Mosa-RT">
+  <meta name="author" content="Mike van Bree">
+
+  <meta name="viewport" content="width=device-width; user-scalable=0;" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" href="./navbarAndGeneric.css">
+  <link rel="stylesheet" href="./dropdown menu.css">
+  <style>
+      .choose {
+          zoom: 1.5;
+          margin-top: 12%;
+          margin-bottom: 5%;
+          margin-left: 125%;
+      }
+      .btn-primary {
+          background-color: #2F829B;
+          border-color: #1C1F83;
+      }
+  </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://arduino.cc" target="_blank"><img class="navbar-logo"
+                src="./Images/Arduino.png" alt="Arduino"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            <div class="dropdown">
+              <li class="dropbtn"><a href="#">Home</a></li>
+              <div class="dropdown-content">
+                <a href="#UitlegMirror">Uitleg Infinity Mirror</a>
+                <a href="#UitlegArduino">Uitleg Arduino</a>
+                <a href="#Fase1">Fase 1</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <li><a class="dropbtn" href="./materialen.html">Materialen</a></li>
+            </div>
+            <div class="dropdown">
+              <li><a class="dropbtn" href="#">Codes</a></li>
+              <div class="dropdown-content">
+                <a href="./code loop.html">RGB - loop</a>
+                <a href="./code potentiometer.html">RGB - handmatig</a>
+                <a href="./code mixed.html">RGB - combinatie</a>
+              </div>
+            </div>
+            <div class="dropdown">
+            <li><a class="dropbtn" href="#">Electrical schematic</a></li>
+            </div>
+          </ul>
+        </div>
+      </nav>
+      <div class="container-fluid content">
+          <div class="choose">
+              <a href="./code loop.html"><button class="btn btn-primary">Code voor de automatische loop</button></a>
+          </div>
+          <div class="choose">
+              <a href="./code potentiometer.html"><button class="btn btn-primary">Code voor draaiknoppen</button></a>
+          </div>
+          <div class="choose">
+              <a href="./code mixed.html"><button class="btn btn-primary">Code voor een combinatie van beide (1 knop)</button></a>
+          </div>
+      </div>
+  </body>
+  </html>
