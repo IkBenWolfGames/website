@@ -1,10 +1,10 @@
+/* generic HTML + body styling */
 html {
     position: absolute;
     min-height: 100%;
     width: 95%;
     overflow: auto;
 }
-
 body {
     font-family: verdana;
     color: white;
@@ -12,13 +12,26 @@ body {
     text-align: center;
 }
 
+/* styling for main content (div) */
 .content {
     position: absolute;
     padding-top: 50px;
 }
 
+/* navbar logo styling */
 .navbar-logo {
     margin-top: -10px;
     max-height: 45px;
     width: auto;
+}
+
+/* styling for sites with code */
+.codecontainer {
+    padding-top: 4%;
+    width: 75%;
+    margin-left: 14.5%;
+}
+code,
+pre {
+  background: #333;
 }
