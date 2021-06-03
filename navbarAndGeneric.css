@@ -24,14 +24,3 @@ body {
     max-height: 45px;
     width: auto;
 }
-
-/* styling for sites with code */
-.codecontainer {
-    padding-top: 4%;
-    width: 75%;
-    margin-left: 14.5%;
-}
-code,
-pre {
-  background: #333;
-}

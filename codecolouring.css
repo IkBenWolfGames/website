@@ -1,3 +1,4 @@
+/* classes with prettify */
 .kwd, .typ {
     color: #27a4ca;
 }
@@ -20,4 +21,15 @@
 
 .prettyprint {
     text-align: left;
+}
+
+/* containers */
+.codecontainer {
+    padding-top: 4%;
+    width: 75%;
+    margin-left: 14.5%;
+}
+code,
+pre {
+  background: #333;
 }
