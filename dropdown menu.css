@@ -38,3 +38,10 @@
 .dropdown:hover .dropbtn {
     background-color: #2b2b2b;
 }
+
+.dropdown a {
+    color: white;
+}
+.dropdown .active {
+    color: #3186A0;
+}

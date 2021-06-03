@@ -34,34 +34,6 @@
       text-align: center;
     }
 
-    h2 {
-      color: #3186A0;
-      font-size: 35px;
-      margin-left: 10px;
-    }
-
-    hr {
-      border-top: 10px solid #3186A0;
-      height: 1px;
-      background-color: #3186A0;
-      border-color: #3186A0;
-      border-width: 2px;
-      opacity: .2;
-      box-shadow: 6px 4px #000000;
-      width: 80%;
-      margin-left: 10%;
-      margin-right: 10%;
-    }
-
-    h1 {
-      font-size: 150%;
-      color: #3186A088;
-    }
-
-    p {
-      color: #ffffffff;
-    }
-
     footer {
       margin-bottom: 0;
       margin-left: -15px;
@@ -79,26 +51,38 @@
       </div>
       <ul class="nav navbar-nav">
         <div class="dropdown">
-          <li class="dropbtn"><a href="#">Home</a></li>
+          <li class="dropbtn"><a class="active" href="">Home</a></li>
           <div class="dropdown-content">
-            <a href="#UitlegMirror">Uitleg Infinity Mirror</a>
-            <a href="#UitlegArduino">Uitleg Arduino</a>
-            <a href="#Fase1">Fase 1</a>
+            <a href="./index.html#UitlegMirror">Uitleg Infinity Mirror</a>
+            <a href="./index.html#UitlegArduino">Uitleg Arduino</a>
+            <a href="./index.html#Fase1">Fase 1</a>
+            <a href="./index.html#Fase2">Fase 2</a>
+            <a href="./index.html#Fase3">Fase 3</a>
           </div>
         </div>
+
         <div class="dropdown">
-          <li><a class="dropbtn" href="./materialen.html">Materialen</a></li>
+          <li class="dropdbtn"><a href="./materialen.html">Materialen</a></li>
         </div>
         <div class="dropdown">
-          <li><a class="dropbtn" href="./codes.html">Codes</a></li>
+          <li class="dropbtn"><a href="./codes.html">Codes</a></li>
           <div class="dropdown-content">
             <a href="./code loop.html">RGB - loop</a>
             <a href="./code potentiometer.html">RGB - handmatig</a>
             <a href="./code mixed.html">RGB - combinatie</a>
           </div>
         </div>
+        
         <div class="dropdown">
-        <li><a class="dropbtn" href="#">Electrical schematic</a></li>
+          <li class="dropbtn"><a href="./schemas.html">Electrical schematic</a></li>
+          <div class="dropdown-content">
+            <a href="./schemaloop.html">Schema loop</a>
+            <a href="./schemahandmatig.html">Schema handmatig</a>
+            <a href="./schemacombinatie.html">Schema combinatie</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <li class="dropbtn"><a href="./fase3foto.html">Foto's</a></li>
         </div>
       </ul>
     </div>
@@ -139,6 +123,18 @@
       <p>ik had geen foto's rond deze tijd genomen, dus ik kan enkel wat er nog over is van het breadboard laten zien.
       </p>
       <img src="./photo's/breadboard.jpg" alt="Uw browser ondersteunt geen foto's." height="25%" width="25%">
+      <hr id="Fase2"><br><br>
+    </div>
+
+    <div class="fase2">
+      <h2>Fase 2</h2>
+      <p>Voor fase 2 heb ik het beschouwd dat ik het project ging coderen, alle code <a href="./codes.html">hier.</a></p>
+      <hr id="Fase3"><br><br>
+    </div>
+
+    <div class="fase3">
+      <h2>Fase 3</h2>
+      <p>Fase 3 is het soldeerwerk en de afwerking van het project, hiervan staan alle foto's <a href="./fase3foto.html">hier.</a></p>
     </div>
   </div>
 </body>

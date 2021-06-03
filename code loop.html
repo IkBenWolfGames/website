@@ -29,39 +29,50 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="https://arduino.cc" target="_blank"><img class="navbar-logo"
-              src="./Images/Arduino.png" alt="Arduino"></a>
-        </div>
-        <ul class="nav navbar-nav">
-          <div class="dropdown">
-            <li class="dropbtn"><a href="./index.html">Home</a></li>
-            <div class="dropdown-content">
-              <a href="#ExplanationMirror">Uitleg Infinity Mirror</a>
-              <a href="#uitlegarduino">Uitleg Arduino</a>
-              <a href="#">Fase 1</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <li><a class="dropbtn" href="./materialen.html">Materialen</a></li>
-          </div>
-          <div class="dropdown">
-            <li><a class="dropbtn" href="#">Codes</a></li>
-            <div class="dropdown-content">
-              <a href="./code loop.html">RGB - loop</a>
-              <a href="./code potentiometer.html">RGB - handmatig</a>
-              <a href="./code mixed.html">RGB - combinatie</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <li><a class="dropbtn" href="#">Electrical schematic</a></li>
-          </div>
-        </ul>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://arduino.cc" target="_blank"><img class="navbar-logo"
+            src="./Images/Arduino.png" alt="Arduino"></a>
       </div>
-    </nav>
+      <ul class="nav navbar-nav">
+        <div class="dropdown">
+          <li class="dropbtn"><a href="./index.html">Home</a></li>
+          <div class="dropdown-content">
+            <a href="./index.html#UitlegMirror">Uitleg Infinity Mirror</a>
+            <a href="./index.html#UitlegArduino">Uitleg Arduino</a>
+            <a href="./index.html#Fase1">Fase 1</a>
+            <a href="./index.html#Fase2">Fase 2</a>
+            <a href="./index.html#Fase3">Fase 3</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <li class="dropdbtn"><a href="./materialen.html">Materialen</a></li>
+        </div>
+        <div class="dropdown">
+          <li class="dropbtn"><a class="active" href="./codes.html">Codes</a></li>
+          <div class="dropdown-content">
+            <a href="./code loop.html">RGB - loop</a>
+            <a href="./code potentiometer.html">RGB - handmatig</a>
+            <a href="./code mixed.html">RGB - combinatie</a>
+          </div>
+        </div>
+        
+        <div class="dropdown">
+          <li class="dropbtn"><a href="./schemas.html">Electrical schematic</a></li>
+          <div class="dropdown-content">
+            <a href="./schemaloop.html">Schema loop</a>
+            <a href="./schemahandmatig.html">Schema handmatig</a>
+            <a href="./schemacombinatie.html">Schema combinatie</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <li class="dropbtn"><a href="./fase3foto.html">Foto's</a></li>
+        </div>
+      </ul>
+    </div>
+  </nav>
     <div class="codecontainer content">
       <pre class="prettyprint"><code class="language-c">
                 const int red = 10, green = 11, blue = 9;
