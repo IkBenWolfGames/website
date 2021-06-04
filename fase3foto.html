@@ -19,6 +19,22 @@
 
   <link rel="stylesheet" href="./navbarAndGeneric.css">
   <link rel="stylesheet" href="./dropdown menu.css">
+  <style>
+    img:not(.navbar-logo) {
+      width: 400px;
+      height: auto;
+      margin-right: 100px;
+      padding-bottom: 10px;
+    }
+
+    .videocol {
+      margin-right: 100px;
+    }
+
+    .row:not(.video) {
+      margin-left: 20%;
+    }
+  </style>
 </head>
 
 <body>
@@ -69,40 +85,39 @@
 
   <div class="container-fluid content">
     <div class="row">
-      <div class="col-sm">
+      <div class="col-md-4">
         <img src="./photo's/breadboard.jpg">
       </div>
-      <div class="col-sm">
+      <div class="col-md-4">
         <img src="./photo's/arduino.jpg">
       </div>
-      <div class="col-sm">
+      <div class="col-md-4">
         <img src="./photo's/combo.jpg">
       </div>
     </div>
     <div class="row">
-      <div class="col-sm">
+      <div class="col-md-4">
         <img src="./photo's/ledstrip.jpg">
       </div>
-      <div class="col-sm">
+      <div class="col-md-4">
         <img src="./photo's/mirror.jpg">
       </div>
-      <div class="col-sm">
+      <div class="col-md-4">
         <img src="./photo's/mirror2.jpg">
       </div>
-      <div class="row">
-        <div class="col-sm">
-          <img src="./photo's/soldeerbordje.jpg">
-        </div>
-        <div class="col-sm">
-          <video src="./photo's/handmatig.mp4"></video>
-          </div>
-          <div class="col-sm">
-            <video src="./photo's/loop.mp4"></video>
-            </div>
-      </div>
-
-
     </div>
+    <div class="row">
+      <div class="col-md-12" style="padding-left: 120px;">
+        <img src="./photo's/soldeerbordje.jpg">
+      </div>
+    </div>
+    <video controls>
+      <source src="./photo's/loop.mp4" type="video/mp4">
+    </video>
+    <video controls>
+      <source src="./photo's/handmatig.mp4" type="video/mp4">
+    </video>
+  </div>
 </body>
 
 </html>
